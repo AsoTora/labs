@@ -27,4 +27,8 @@ stuff/
 
 # other
 ignore_*
-*DS_Store*
+.DS_Store
+_DS_Store
+.vscode
+venv/
+__pycache__

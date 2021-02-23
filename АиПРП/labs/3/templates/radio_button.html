@@ -1,0 +1,26 @@
+{%extends "layout.html"%} {%block content%}
+
+<div class="content-section">
+    <h4>
+      Sorry, could not find your word, but you can suggest!
+    </h4>
+    <form method="POST" action=" " class="form-group">
+      {{ form.hidden_tag() }}  <!-- token -->
+      
+      <!-- input forms -->
+      <fieldset class="form-group">
+          {{ form.word.label(class="form-control-label") }}
+          {{ form.word(class="form-control form-control-lg") }}
+          <br>
+          {{ form.translation.label(class="form-control-label") }}
+          {{ form.translation(class="form-control form-control-lg") }}
+      </fieldset>
+
+      <!-- submit button -->
+      <div class="form-group">
+        {{form.submit( class ="btn btn-outline-info")}}
+      </div>
+    </form>
+</div>
+
+{% endblock content %}

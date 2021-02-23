@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block content %}
+    {% for dep in departments %}
+    <article class="media content-section">
+        <div class="media-body">
+          <div class="article-metadata">
+            <a class="mr-2">{{ dep.name }}</a>
+            <small class="text-muted">{{ dep.URL }}</small>
+          </div>
+          <p class="article-content">
+            {% for student in dep.students %}
+              {{ student.name }} - {{ student.email }}
+            {% endfor %}
+            </p>
+        </div>
+      </article>
+    {% endfor %}
+{% endblock content %}
