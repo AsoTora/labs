@@ -16,7 +16,7 @@ def new_student():
     form = StudentForm()
     if form.validate_on_submit():
         stud = Student(name=form.name.data,
-                       email=form.email.data, department_id=1)
+                       email=form.email.data, department_id=Department)
         db.session.add(stud)
         db.session.commit()
         flash('Your stud has been created!', 'success')

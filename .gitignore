@@ -29,6 +29,7 @@ stuff/
 ignore_*
 .DS_Store
 _DS_Store
-.vscode
+.vscode/
 venv/
 __pycache__
+Icon*
